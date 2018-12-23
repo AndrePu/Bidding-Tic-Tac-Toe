@@ -12,3 +12,10 @@ X:\Career\ISD\Bidding Tic Tac Toe\Console Binding Tic Tac Toe\obj\Debug\Binding 
 X:\Career\ISD\Bidding Tic Tac Toe\Console Binding Tic Tac Toe\obj\Debug\Binding Tic Tac Toe Console App.csproj.CoreCompileInputs.cache
 X:\Career\ISD\Bidding Tic Tac Toe\Console Binding Tic Tac Toe\obj\Debug\Binding Tic Tac Toe Console App.exe
 X:\Career\ISD\Bidding Tic Tac Toe\Console Binding Tic Tac Toe\obj\Debug\Binding Tic Tac Toe Console App.pdb
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Console Binding Tic Tac Toe\bin\Debug\Binding Tic Tac Toe Console App.exe.config
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Console Binding Tic Tac Toe\bin\Debug\Binding Tic Tac Toe Console App.exe
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Console Binding Tic Tac Toe\bin\Debug\Binding Tic Tac Toe Console App.pdb
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Console Binding Tic Tac Toe\obj\Debug\Binding Tic Tac Toe Console App.csprojResolveAssemblyReference.cache
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Console Binding Tic Tac Toe\obj\Debug\Binding Tic Tac Toe Console App.csproj.CoreCompileInputs.cache
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Console Binding Tic Tac Toe\obj\Debug\Binding Tic Tac Toe Console App.exe
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Console Binding Tic Tac Toe\obj\Debug\Binding Tic Tac Toe Console App.pdb

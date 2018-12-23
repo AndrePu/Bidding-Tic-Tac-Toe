@@ -21,6 +21,7 @@ namespace Binding_Tic_Tac_Toe_Console_App
             InitializeField();
             current_game = GameState.InProcess;
             StepAnalysis.steps = 0;
+            Player.player_number = 0;
         }
         void InitializeField()
         {

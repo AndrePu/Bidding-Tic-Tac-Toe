@@ -8,7 +8,7 @@ namespace Binding_Tic_Tac_Toe_Console_App
 {
     public class Player : IPlayer
     {
-        static int player_number = 0;
+        internal static int player_number = 0;
 
         string name = "Player";
 

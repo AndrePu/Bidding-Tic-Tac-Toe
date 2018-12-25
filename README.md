@@ -10,4 +10,4 @@ This is far different from original game process.
 2) After two players made their bids it's finding out who is the winner of this round. The winner takes the right to make his own move on field. The loser takes all the bids of the current round.
 3) To win the game you need to have horizontally or vertically or maybee diagonally located zeros or crosses.
 
-StartUp file: Bidding Tic Tac Toe.exe (I have a mistake in written word "bidding")
+StartUp file: Bidding Tic Tac Toe.exe

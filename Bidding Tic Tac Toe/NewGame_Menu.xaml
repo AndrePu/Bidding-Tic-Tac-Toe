@@ -1,0 +1,181 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bidding_Tic_Tac_Toe"
+        x:Class="Bidding_Tic_Tac_Toe.NewGame_Menu"
+        mc:Ignorable="d"
+        Title="NewGame_Menu" Background="Transparent" Height="480" Width="360" Icon="tic_tac_toe_icon.ico" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" AllowsTransparency="True" WindowStyle="None" Foreground="{x:Null}" KeyDown="Window_KeyDown">
+    <Window.Resources>
+        <Storyboard x:Key="BordersColor" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[0].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0:0:15" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0:0:15" Value="0.323"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[2].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0:0:15" Value="0.905"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[3].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0:0:15" Value="0.628"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[4].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0:0:15" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[4].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+                <EasingColorKeyFrame KeyTime="0:0:15" Value="#FF3DFD29"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[8].(GradientStop.Color)" Storyboard.TargetName="rectangle">
+                <EasingColorKeyFrame KeyTime="0:0:15" Value="White"/>
+            </ColorAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[8].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0:0:15" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[5].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0:0:15" Value="0.891"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[6].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0:0:15" Value="0.005"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[7].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0:0:15" Value="0.634"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[9].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0:0:15" Value="0.32"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Storyboard1" RepeatBehavior="Forever"/>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFFFFF"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF16E500"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" CornerRadius="20">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard x:Name="BordersColor_BeginStoryboard" Storyboard="{StaticResource BordersColor}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="77*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="77*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="120*"/>
+        </Grid.RowDefinitions>
+
+        <Rectangle x:Name="rectangle" Grid.ColumnSpan="3" HorizontalAlignment="Right" Height="478.4" Margin="0,0,0,0" RadiusY="20" RadiusX="20" Grid.RowSpan="7" StrokeThickness="2" VerticalAlignment="Top" Width="358.4" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown">
+            <Rectangle.Stroke>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF18FD00" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.677"/>
+                    <GradientStop Color="White" Offset="0.095"/>
+                    <GradientStop Color="#FF18FD00" Offset="0.372"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FF2FFD19" Offset="0.109"/>
+                    <GradientStop Color="White" Offset="0.995"/>
+                    <GradientStop Color="White" Offset="0.366"/>
+                    <GradientStop Color="#FF3DFD29"/>
+                    <GradientStop Color="#FF3DFD29" Offset="0.68"/>
+                </LinearGradientBrush>
+            </Rectangle.Stroke>
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Resources/Background2.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+
+        <Button x:Name="one_pl_Button" Content="1 Player" Margin="0,0,0,0" Width="200" BorderThickness="3" FontFamily="Snap ITC" FontSize="24" Foreground="#FF18FD00" BorderBrush="#FF18FD00" Grid.Column="1" Grid.Row="1">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/Background4.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="two_pl_Button" Content="2 Players" Margin="0,0,0,0" Width="200" Height="50" BorderThickness="3" FontFamily="Snap ITC" FontSize="24" Foreground="#FF18FD00" BorderBrush="#FF18FD00" Grid.Row ="3" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/Background4.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Back_Button" Content="Back" Margin="0,0,0,0" Width="200" Height="50" BorderThickness="3" FontFamily="Snap ITC" FontSize="24" Grid.Row="5" Grid.Column ="1" Click="Back_Button_Click" Foreground="#FF18FD00" BorderBrush="#FF18FD00">
+            <Button.Background>
+                <ImageBrush ImageSource="Resources/Background4.jpg"/>
+            </Button.Background>
+        </Button>
+        <TextBlock Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="97.2" Margin="35.1,20.3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278.4" Text="Bidding Tic Tac Toe" FontSize="36" FontFamily="Snap ITC" TextAlignment="Center" >
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF16E500" Offset="0.241"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+
+    </Grid>
+</Window>

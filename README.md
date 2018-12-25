@@ -11,3 +11,5 @@ This is far different from original game process.
 3) To win the game you need to have horizontally or vertically or maybee diagonally located zeros or crosses.
 
 StartUp file: Bidding Tic Tac Toe.exe
+
+P.S. WPF Application isn't ready yet!!!

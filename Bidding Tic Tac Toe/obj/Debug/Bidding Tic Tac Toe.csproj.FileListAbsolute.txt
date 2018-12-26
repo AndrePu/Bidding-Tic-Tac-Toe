@@ -49,3 +49,58 @@ X:\Career\ISD\Bidding Tic Tac Toe\Bidding Tic Tac Toe\bin\Debug\zh-Hans\System.W
 X:\Career\ISD\Bidding Tic Tac Toe\Bidding Tic Tac Toe\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
 X:\Career\ISD\Bidding Tic Tac Toe\Bidding Tic Tac Toe\obj\Debug\NewGame_Menu.g.cs
 X:\Career\ISD\Bidding Tic Tac Toe\Bidding Tic Tac Toe\obj\Debug\NewGame_Menu.baml
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\Bidding Tic Tac Toe.exe.config
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\Bidding Tic Tac Toe.exe
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\Bidding Tic Tac Toe.pdb
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\Microsoft.Expression.Effects.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\Microsoft.Expression.Interactions.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\System.Windows.Interactivity.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\de\Microsoft.Expression.Effects.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\es\Microsoft.Expression.Effects.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\fr\Microsoft.Expression.Effects.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\it\Microsoft.Expression.Effects.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\ja\Microsoft.Expression.Effects.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\ko\Microsoft.Expression.Effects.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\ru\Microsoft.Expression.Effects.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\zh-Hans\Microsoft.Expression.Effects.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\zh-Hant\Microsoft.Expression.Effects.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\de\Microsoft.Expression.Interactions.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\en\Microsoft.Expression.Interactions.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\es\Microsoft.Expression.Interactions.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\fr\Microsoft.Expression.Interactions.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\it\Microsoft.Expression.Interactions.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\ja\Microsoft.Expression.Interactions.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\ko\Microsoft.Expression.Interactions.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\ru\Microsoft.Expression.Interactions.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\zh-Hans\Microsoft.Expression.Interactions.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\zh-Hant\Microsoft.Expression.Interactions.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\de\System.Windows.Interactivity.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\en\System.Windows.Interactivity.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\es\System.Windows.Interactivity.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\it\System.Windows.Interactivity.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\ru\System.Windows.Interactivity.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\Bidding Tic Tac Toe.csprojResolveAssemblyReference.cache
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\ClosingForm.g.cs
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\MainMenu.g.cs
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\NewGame_Menu.g.cs
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\App.g.cs
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\Bidding Tic Tac Toe_MarkupCompile.cache
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\Bidding Tic Tac Toe_MarkupCompile.lref
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\ClosingForm.baml
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\MainMenu.baml
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\NewGame_Menu.baml
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\Bidding Tic Tac Toe.g.resources
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\Bidding_Tic_Tac_Toe.Properties.Resources.resources
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\Bidding Tic Tac Toe.csproj.GenerateResource.Cache
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\Bidding Tic Tac Toe.csproj.CoreCompileInputs.cache
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\Bidding Tic Tac Toe.exe
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\Bidding Tic Tac Toe.pdb
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\Game.g.cs
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\GameInterrupt.g.cs
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\Game.baml
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\GameInterrupt.baml

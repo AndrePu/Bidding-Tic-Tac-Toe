@@ -1,0 +1,27 @@
+﻿<Window x:Class="Bidding_Tic_Tac_Toe.Game"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bidding_Tic_Tac_Toe"
+        mc:Ignorable="d"
+        Title="NewGame_Menu" Background="Transparent" Height="480" Width="640" Icon="tic_tac_toe_icon.ico" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" AllowsTransparency="True" WindowStyle="None" Foreground="{x:Null}" KeyDown="Window_KeyDown">
+    <Grid>
+
+        <Rectangle x:Name="rectangle" RadiusY="20" RadiusX="20" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown">
+            <Rectangle.Stroke>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF16E500" Offset="0.823"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="White" Offset="0.451"/>
+                    <GradientStop Color="#FFC3F8BD" Offset="0.655"/>
+                    <GradientStop Color="#FF16E500" Offset="0.235"/>
+                </LinearGradientBrush>
+            </Rectangle.Stroke>
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Resources/Background2.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+    </Grid>
+</Window>

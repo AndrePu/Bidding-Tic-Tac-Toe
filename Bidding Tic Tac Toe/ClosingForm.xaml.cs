@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace Bidding_Tic_Tac_Toe
 {
     /// <summary>
-    /// Логика взаимодействия для Closing_Form.xaml
+    /// Message Box that warns about closing app.
     /// </summary>
     public partial class ClosingForm : Window
     {
@@ -33,13 +33,20 @@ namespace Bidding_Tic_Tac_Toe
 
         private void Yes_button_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            App.Current.Shutdown();
+            CloseApp();
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Escape)
                 ReturnToMainMenu();
+            else if (e.Key == Key.Enter)
+                CloseApp();
+        }
+
+        private void CloseApp()
+        {
+            App.Current.Shutdown();
         }
 
         private void ReturnToMainMenu()

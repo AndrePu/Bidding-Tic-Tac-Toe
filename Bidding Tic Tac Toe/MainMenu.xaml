@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bidding_Tic_Tac_Toe"
         mc:Ignorable="d"
-        Title="MainMenu" Height="480" Width="360" Icon="tic_tac_toe_icon.ico" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}" KeyDown="Window_KeyDown">
+        Title="MainMenu" Height="480" Width="360" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Background="Transparent" KeyDown="Window_KeyDown">
     <Window.Resources>
+        
+        <!--Creating alive border for rectangle-->
         <Storyboard x:Key="BorderColor" RepeatBehavior="Forever">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[0].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
                 <EasingDoubleKeyFrame KeyTime="0:0:15" Value="0.177"/>
@@ -24,38 +26,40 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:15" Value="0.765"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
-        <Style x:Key="FocusVisual">
-            <Setter Property="Control.Template">
-                <Setter.Value>
-                    <ControlTemplate>
-                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
-        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+
+        <!--Making colors template for button events-->
+         <ImageBrush x:Key="Button.Static.Background" ImageSource="Resources/Background4.jpg"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF16E500"/>
+        <SolidColorBrush x:Key="Button.Static.Foreground" Color="#FF16E500"/>
         <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFFFFF"/>
         <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF16E500"/>
-        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
-        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFA3FCB4"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF008E16"/>
         <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        
+        <!--Creating a style for button template-->
         <Style TargetType="{x:Type Button}">
-            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="FontFamily" Value="Snap ITC"/>
+            <Setter Property="FontSize" Value="24"/>
             <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
             <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
-            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="{StaticResource Button.Static.Foreground}"/>
+            <Setter Property="BorderThickness" Value="3"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="Padding" Value="1"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" CornerRadius="10">
-                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" CornerRadius="20">
+                            <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                <ContentPresenter.Effect>
+                                    <DropShadowEffect/>
+                                </ContentPresenter.Effect>
+                            </ContentPresenter>
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsDefaulted" Value="true">
@@ -80,25 +84,32 @@
             </Setter>
         </Style>
     </Window.Resources>
+
+    <!--Run storyboard to make alive window border-->
     <Window.Triggers>
         <EventTrigger RoutedEvent="FrameworkElement.Loaded">
             <BeginStoryboard Storyboard="{StaticResource BorderColor}"/>
         </EventTrigger>
     </Window.Triggers>
+    
+    
     <Grid>
-
+        
+        <!--Setting columns and rows allocation -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="77*"/>
             <ColumnDefinition Width="200*"/>
             <ColumnDefinition Width="77*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="150*"/>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="25*"/>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="176*"/>
+            <RowDefinition Height="160*"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="53.215"/>
+            <RowDefinition Height="187*"/>
         </Grid.RowDefinitions>
+        
+        <!--Forming our frame for menu-->
         <Rectangle x:Name="rectangle" Grid.ColumnSpan="3" HorizontalAlignment="Right" Height="478.4" Margin="0,0,0,0" RadiusY="20" RadiusX="20" Grid.RowSpan="5" StrokeThickness="2" VerticalAlignment="Top" Width="358.4" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown">
             <Rectangle.Stroke>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -114,7 +125,11 @@
             </Rectangle.Fill>
         </Rectangle>
 
-        <TextBlock Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="97.2" Margin="35.1,20.3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="278.4" Text="Bidding Tic Tac Toe" FontSize="36" FontFamily="Snap ITC" TextAlignment="Center" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" >
+        <!--Creating app name with DropShadow effect and gradient fill-->
+        <TextBlock Grid.ColumnSpan="3" HorizontalAlignment="Center" Height="100" Margin="0,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="275" Text="Bidding Tic Tac Toe" FontSize="36" FontFamily="Snap ITC" TextAlignment="Center" >
+            <TextBlock.Effect>
+                <DropShadowEffect/>
+            </TextBlock.Effect>
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="#FF16E500" Offset="0.241"/>
@@ -123,17 +138,9 @@
             </TextBlock.Foreground>
         </TextBlock>
 
-        <Button x:Name="newGame_Button" Content="New Game" Margin=" 0, 0, 0, 0" Width="200" Height="50" BorderThickness="3" FontFamily="Snap ITC" FontSize="24" BorderBrush="#FF16E500" Grid.Row ="1" Grid.Column="1" Click="newGame_Button_Click" Foreground="#FF16E500">
-            <Button.Background>
-                <ImageBrush ImageSource="Resources/Background4.jpg"/>
-            </Button.Background>
-        </Button>
-
-        <Button x:Name="exit_Button" Content="EXIT" Margin=" 0, 0, 0, 0" Width="200" Height="50" BorderThickness="3" FontFamily="Snap ITC" FontSize="24" Grid.Row="3" Grid.Column ="1" Click="exit_Button_Click" Foreground="#FF16E500" BorderBrush="#FF16E500">
-            <Button.Background>
-                <ImageBrush ImageSource="Resources/Background4.jpg"/>
-            </Button.Background>
-        </Button>
-
+        <!--Creating our main buttons-->
+        <Button x:Name="newGame_Button" Content="New Game" Grid.Row ="1" Grid.Column="1" Click="newGame_Button_Click"/>
+        <Button x:Name="exit_Button" Content="EXIT" Grid.Row="3" Grid.Column ="1" Click="exit_Button_Click"/>
+        
     </Grid>
 </Window>

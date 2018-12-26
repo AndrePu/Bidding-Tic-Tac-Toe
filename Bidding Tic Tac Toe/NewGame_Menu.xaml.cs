@@ -46,5 +46,12 @@ namespace Bidding_Tic_Tac_Toe
             mainForm.Show();
             this.Close();
         }
+
+        private void one_pl_Button_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Game newGame = new Game();
+            newGame.Show();
+            this.Close();
+        }
     }
 }

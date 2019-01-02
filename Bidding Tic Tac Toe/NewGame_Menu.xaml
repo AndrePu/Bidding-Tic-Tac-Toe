@@ -168,8 +168,8 @@
         </TextBlock>
 
         <!--Creating our main buttons-->
-        <Button x:Name="one_pl_Button" Content="1 Player" Grid.Column="1" Grid.Row="1" MouseDown="one_pl_Button_MouseDown"/>
-        <Button x:Name="two_pl_Button" Content="2 Players" Grid.Row ="3" Grid.Column="1"/>
+        <Button x:Name="one_pl_Button" Content="1 Player" Grid.Column="1" Grid.Row="1" Click="one_pl_Button_Click"/>
+        <Button x:Name="two_pl_Button" Content="2 Players" Grid.Row ="3" Grid.Column="1" Click="two_pl_Button_Click"/>
         <Button x:Name="Back_Button" Content="Back" Grid.Row="5" Grid.Column ="1" Click="Back_Button_Click"/>
 
     </Grid>

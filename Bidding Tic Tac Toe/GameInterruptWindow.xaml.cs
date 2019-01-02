@@ -24,30 +24,22 @@ namespace Bidding_Tic_Tac_Toe
         public GameInterrupt()
         {
             InitializeComponent();
-            Game.iForm_init = true;
         }
 
         private void Yes_button_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            returnToMenu = true;
-            CloseInterruptWindow();
+            this.DialogResult = true;
         }
 
         private void No_button_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            CloseInterruptWindow();
+            this.DialogResult = false;
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Escape)
-                CloseInterruptWindow();
-        }
-
-        void CloseInterruptWindow()
-        {
-            Game.iForm_init = false;
-            this.Close();
+                this.DialogResult = false;
         }
     }
 }

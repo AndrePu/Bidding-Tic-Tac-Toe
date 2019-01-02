@@ -37,6 +37,7 @@
     <ApplicationIcon>tic_tac_toe_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Expression.Effects, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -64,16 +65,24 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Player\Bot.cs" />
+    <Compile Include="Constants\GameProcess.cs" />
+    <Compile Include="Constants\GameState.cs" />
+    <Compile Include="Player\IPlayer.cs" />
+    <Compile Include="Player\Player.cs" />
+    <Compile Include="SetPlayerName.xaml.cs">
+      <DependentUpon>SetPlayerName.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClosingForm.xaml.cs">
-      <DependentUpon>ClosingForm.xaml</DependentUpon>
+    <Compile Include="ClosingWindow.xaml.cs">
+      <DependentUpon>ClosingWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Game.xaml.cs">
       <DependentUpon>Game.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GameInterrupt.xaml.cs">
-      <DependentUpon>GameInterrupt.xaml</DependentUpon>
+    <Compile Include="GameInterruptWindow.xaml.cs">
+      <DependentUpon>GameInterruptWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
@@ -107,7 +116,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="ClosingForm.xaml">
+    <Page Include="ClosingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SetPlayerName.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -115,7 +128,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GameInterrupt.xaml">
+    <Page Include="GameInterruptWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -143,5 +156,6 @@
   <ItemGroup>
     <Resource Include="Resources\Background4.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

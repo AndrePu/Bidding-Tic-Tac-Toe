@@ -9,7 +9,7 @@
         xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
         xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" 
     
-        x:Class="Bidding_Tic_Tac_Toe.ClosingForm"
+        x:Class="Bidding_Tic_Tac_Toe.ClosingWindow"
         mc:Ignorable="d"
         Title="Closing_Form" Background="Transparent" WindowStyle="None" Height="120" Width="300" AllowsTransparency="True" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown">
     <Window.Resources>

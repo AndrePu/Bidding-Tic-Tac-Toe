@@ -22,7 +22,6 @@ namespace Bidding_Tic_Tac_Toe
         public NewGame_Menu()
         {
             InitializeComponent();
-            this.Activate();
         }
 
         private void Back_Button_Click(object sender, RoutedEventArgs e)
@@ -46,10 +45,20 @@ namespace Bidding_Tic_Tac_Toe
             mainForm.Show();
             this.Close();
         }
-
-        private void one_pl_Button_MouseDown(object sender, MouseButtonEventArgs e)
+        
+        private void one_pl_Button_Click(object sender, RoutedEventArgs e)
         {
-            Game newGame = new Game();
+            bool game_with_Bot = true;
+            Game newGame = new Game(game_with_Bot);
+            newGame.Show();
+            this.Close();
+        }
+
+        private void two_pl_Button_Click(object sender, RoutedEventArgs e)
+        {
+            bool game_with_Bot = false;
+
+            Game newGame = new Game(game_with_Bot);
             newGame.Show();
             this.Close();
         }

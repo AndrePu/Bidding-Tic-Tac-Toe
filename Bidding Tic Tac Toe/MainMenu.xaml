@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bidding_Tic_Tac_Toe"
         mc:Ignorable="d"
+        
         Title="MainMenu" Height="480" Width="360" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Background="Transparent" KeyDown="Window_KeyDown">
     <Window.Resources>
         

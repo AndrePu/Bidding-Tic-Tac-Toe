@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bidding_Tic_Tac_Toe
+namespace Bidding_Tic_Tac_Toe.Constants
 {
-    public enum GameState
+    public enum BotDifficulty
     {
-        InProcess,
-        Win
+        Easy,
+        Medium,
+        Hard
     }
 }

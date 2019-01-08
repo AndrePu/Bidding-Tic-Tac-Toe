@@ -65,11 +65,18 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CongratulationWindow.xaml.cs">
+      <DependentUpon>CongratulationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Constants\BotDifficulty.cs" />
     <Compile Include="Player\Bot.cs" />
     <Compile Include="Constants\GameProcess.cs" />
     <Compile Include="Constants\GameState.cs" />
     <Compile Include="Player\IPlayer.cs" />
     <Compile Include="Player\Player.cs" />
+    <Compile Include="SetBotDifficultyWindow.xaml.cs">
+      <DependentUpon>SetBotDifficultyWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SetPlayerName.xaml.cs">
       <DependentUpon>SetPlayerName.xaml</DependentUpon>
     </Compile>
@@ -107,6 +114,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Design\projectGuides.guides" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -117,6 +125,14 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="ClosingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CongratulationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SetBotDifficultyWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -156,6 +172,11 @@
   <ItemGroup>
     <Resource Include="Resources\Background4.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\Rick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Rick1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

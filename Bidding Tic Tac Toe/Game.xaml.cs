@@ -16,15 +16,17 @@ namespace Bidding_Tic_Tac_Toe
 {
 
     public partial class Game : Window
-    {
+    {   
         private bool game_with_Bot = false;
         private char move_symbol = 'X';
         private GameProcess game_process = GameProcess.Bidding;
+        private GameState game_state = GameState.InProcess;
 
         private int field_size = 3;
         private bool[,] fieldCell_filled;   // indicates whether cell of field is already filled
 
         private char[,] field;
+
 
         IPlayer player1;
         IPlayer player2;   // we don't know yet if it's Bot player or not
@@ -90,6 +92,12 @@ namespace Bidding_Tic_Tac_Toe
                 player1 = new Bot("Bot", 'O');
             }
         }
+
+        private void SetBotDifficulty()
+        {
+
+        }
+
         private void SetOptionsTwoMan()
         {
             SetPlayerName p_name1 = new SetPlayerName();
@@ -101,8 +109,7 @@ namespace Bidding_Tic_Tac_Toe
             player2 = new Player(p_name2.GetName(), 'O');
         }
         #endregion
-
-
+        
         #region Интерактивные методы
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
@@ -161,7 +168,7 @@ namespace Bidding_Tic_Tac_Toe
         private void StartBidRound() // start game point
         {
             playground.IsEnabled = false;
-            bid_info_block.Text = $"{player1.Name} makes a bid. Please choose your bid:";
+            bid_info_block.Text = $"{player1.Name} makes a bid. Please, choose your bid:";
             RoundFirstBid();
         }
 
@@ -181,6 +188,12 @@ namespace Bidding_Tic_Tac_Toe
             else
             {
                 FirstPlayerBid();
+
+                if (player1.ZeroPoints == true)     // ставки исчерпаны
+                {
+                    player1.Round_bid = 0;
+                    EndPlayerBid();
+                }
             }
         }
 
@@ -200,6 +213,12 @@ namespace Bidding_Tic_Tac_Toe
             {
                 bid_info_block.Text += " Please choose your bid: ";
                 SecondPlayerBid();
+
+                if (player2.ZeroPoints == true)     // ставки исчерпаны
+                {
+                    player2.Round_bid = 0;
+                    EndPlayerBid();
+                }
             }
         }
 
@@ -261,57 +280,57 @@ namespace Bidding_Tic_Tac_Toe
 
         private void SecondPlayerBid()
         {
-            player1.ZeroPoints = false;
+            player2.ZeroPoints = false;
 
-            if (player1.Bidding_points.Count == 8)
+            if (player2.Bidding_points.Count == 8)
             {
-                bid8.Text = player1.Bidding_points[7].ToString();
+                bid8.Text = player2.Bidding_points[7].ToString();
                 bid8.Visibility = Visibility.Visible;
             }
 
-            if (player1.Bidding_points.Count > 6)
+            if (player2.Bidding_points.Count > 6)
             {
-                bid7.Text = player1.Bidding_points[6].ToString();
+                bid7.Text = player2.Bidding_points[6].ToString();
                 bid7.Visibility = Visibility.Visible;
             }
 
-            if (player1.Bidding_points.Count > 5)
+            if (player2.Bidding_points.Count > 5)
             {
-                bid6.Text = player1.Bidding_points[5].ToString();
+                bid6.Text = player2.Bidding_points[5].ToString();
                 bid6.Visibility = Visibility.Visible;
             }
 
-            if (player1.Bidding_points.Count > 4)
+            if (player2.Bidding_points.Count > 4)
             {
-                bid5.Text = player1.Bidding_points[4].ToString();
+                bid5.Text = player2.Bidding_points[4].ToString();
                 bid5.Visibility = Visibility.Visible;
             }
 
-            if (player1.Bidding_points.Count > 3)
+            if (player2.Bidding_points.Count > 3)
             {
-                bid4.Text = player1.Bidding_points[3].ToString();
+                bid4.Text = player2.Bidding_points[3].ToString();
                 bid4.Visibility = Visibility.Visible;
             }
 
-            if (player1.Bidding_points.Count > 2)
+            if (player2.Bidding_points.Count > 2)
             {
-                bid3.Text = player1.Bidding_points[2].ToString();
+                bid3.Text = player2.Bidding_points[2].ToString();
                 bid3.Visibility = Visibility.Visible;
             }
 
-            if (player1.Bidding_points.Count > 1)
+            if (player2.Bidding_points.Count > 1)
             {
-                bid2.Text = player1.Bidding_points[1].ToString();
+                bid2.Text = player2.Bidding_points[1].ToString();
                 bid2.Visibility = Visibility.Visible;
             }
 
-            if (player1.Bidding_points.Count > 0)
+            if (player2.Bidding_points.Count > 0)
             {
-                bid1.Text = player1.Bidding_points[0].ToString();
+                bid1.Text = player2.Bidding_points[0].ToString();
                 bid1.Visibility = Visibility.Visible;
             }
             else
-                player1.ZeroPoints = true;
+                player2.ZeroPoints = true;
         }
         #endregion
 
@@ -330,6 +349,7 @@ namespace Bidding_Tic_Tac_Toe
             {
                 EndBidRound();
             }
+            HideAllBids();
         }
 
         private void EndBidRound()              // заканчиваем раунд ставок
@@ -370,7 +390,6 @@ namespace Bidding_Tic_Tac_Toe
                     SetCommentBidResult(player2.Name, true);
                 }
             }
-
             SetRoundBidScore();
             StartMoveRound();
         }
@@ -394,8 +413,8 @@ namespace Bidding_Tic_Tac_Toe
             player1.Turn = false;
             player2.Turn = true;
 
-            player1.Bidding_points.Add(player1.Round_bid);
-            player2.Bidding_points.Remove(player1.Round_bid);
+            player1.Bidding_points.Add(player2.Round_bid);
+            player2.Bidding_points.Remove(player2.Round_bid);
 
             move_symbol = player2.Playing_symbol;
             turn_textBlock.Text = $"{player2.Name}'s move";
@@ -417,6 +436,17 @@ namespace Bidding_Tic_Tac_Toe
                 comment_bidResult_Textblock.Text = $"Now, {winner_name} makes a move.";
         }
         
+        private void HideAllBids()
+        {
+            bid1.Visibility = Visibility.Hidden;
+            bid2.Visibility = Visibility.Hidden;
+            bid3.Visibility = Visibility.Hidden;
+            bid4.Visibility = Visibility.Hidden;
+            bid5.Visibility = Visibility.Hidden;
+            bid6.Visibility = Visibility.Hidden;
+            bid7.Visibility = Visibility.Hidden;
+            bid8.Visibility = Visibility.Hidden;
+        }
         #endregion
 
         #region Интерактивная часть ставки (Человек)
@@ -552,14 +582,6 @@ namespace Bidding_Tic_Tac_Toe
             }
         }
 
-        #region Анализ сделанного хода
-        private void AnalyzeStep()
-        {
-            AnalyzeByRows();
-            AnalyzeByColumns();
-            AnalyzeByDiagonals();
-        }
-        #endregion
 
         #region Ход человека
 
@@ -798,11 +820,132 @@ namespace Bidding_Tic_Tac_Toe
 
         #endregion
 
+        #region Анализ сделанного хода
+        private void AnalyzeStep()
+        {
+            bool game_end = false;
+
+            AnalyzeByRows(ref game_end);
+
+            if (game_end == true)
+                DefineWinner();
+
+            AnalyzeByColumns(ref game_end);
+
+            if (game_end == true)
+                DefineWinner();
+
+            AnalyzeByMainDiagonal(ref game_end);
+
+            if (game_end == true)
+                DefineWinner();
+
+            AnalyzeBySideDiagonal(ref game_end);
+
+            if (game_end == true)
+                DefineWinner();
+
+            EndMoveRound();
+        }
+
+        private void AnalyzeByRows(ref bool game_end)
+        {
+            for (int i = 0; i < field_size; i++)
+            {
+                game_end = true;
+                for (int j = 1; j < field_size; j++)
+                {
+                    if (field[i,j-1] != field[i,j] || field[i,j] == ' ')
+                    {
+                        game_end = false;
+                    }
+                }
+
+                if (game_end == true)
+                    return;
+            }
+        }
+
+        private void AnalyzeByColumns(ref bool game_end)
+        {
+            for (int j = 0; j < field_size; j++)
+            {
+                game_end = true;
+                for (int i = 1; i < field_size; i++)
+                {
+                    if (field[i-1, j] != field[i, j] || field[i, j] == ' ')
+                    {
+                        game_end = false;
+                    }
+                }
+                if (game_end == true)
+                    return;
+            }
+        }
+
+        private void AnalyzeByMainDiagonal(ref bool game_end)
+        {
+            game_end = true;
+
+            for (int i = 1; i < field_size; i++)
+            {
+                if (field[i-1,i-1] != field[i,i] || field[i,i] == ' ')
+                {
+                    game_end = false;
+                    return;
+                }
+            }
+        }
+
+        private void AnalyzeBySideDiagonal(ref bool game_end)
+        {
+            game_end = true;
+
+            for (int i = 1; i < field_size; i++)
+            {
+                if (field[i - 1, field_size-i] != field[i, field_size-i-1] || field[i, field_size-i-1] == ' ')
+                {
+                    game_end = false;
+                    return;
+                }
+            }
+        }
+        #endregion
+
+
+        private void EndMoveRound()
+        {
+            moveGrid.Visibility = Visibility.Hidden;
+            bidGrid.Visibility = Visibility.Visible;
+
+            StartBidRound();
+        }
         #endregion
 
         #endregion
 
+        private void DefineWinner()
+        {
+            CongratulationWindow con_win;
+            if (player1.Turn)
+            {
+                con_win = new CongratulationWindow(player1.Name);
+            }
+            else
+            {
+                con_win = new CongratulationWindow(player2.Name);
+            }
 
+            if (con_win.ShowDialog() == true)
+                ReturnToMainMenu();
+        }
+
+        private void ReturnToMainMenu()
+        {
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.Show();
+            this.Close();
+        }
     }
 }
 

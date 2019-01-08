@@ -1,0 +1,75 @@
+﻿<Window x:Class="Bidding_Tic_Tac_Toe.CongratulationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bidding_Tic_Tac_Toe"
+        
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+        xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+        xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" 
+        
+        mc:Ignorable="d"
+        Title="Closing_Form" Background="Transparent" WindowStyle="None" Height="200" Width="350" AllowsTransparency="True" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown">
+    <Window.Resources>
+        <Storyboard x:Key="BorderColor" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[0].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0:0:15" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[1].(GradientStop.Offset)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0:0:15" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource BorderColor}"/>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Grid>
+        <Rectangle x:Name="rectangle" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="350" UseLayoutRounding="True" RadiusX="10" RadiusY="10" StrokeThickness="2">
+            <Rectangle.Stroke>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF18FD00" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                    <GradientStop Color="#FFC3FEBD" Offset="0.281"/>
+                    <GradientStop Color="#FF43FD2F" Offset="0.699"/>
+                </LinearGradientBrush>
+            </Rectangle.Stroke>
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Resources/Background2.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <TextBlock x:Name="congratulation_textBlock" HorizontalAlignment="Center" Margin="19.231,35,16.831,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="313.938" Height="50" Text="Congratulations, " FontSize="20" FontFamily="Snap ITC" TextAlignment="Center" Foreground="#FF18FD00">
+            <TextBlock.Effect>
+                <DropShadowEffect/>
+            </TextBlock.Effect>
+        </TextBlock>
+
+        <TextBlock x:Name="okay_button" Margin="126.382,127.741,133.618,0" TextWrapping="Wrap" VerticalAlignment="Top"  HorizontalAlignment="Center" Height="30" Width="90" Foreground="#FF18FD00" FontSize="20" FontFamily="Snap ITC" TextAlignment="Center" Text="Okay" MouseDown="okay_button_MouseDown" Cursor="Hand" >
+            <TextBlock.Effect>
+                <DropShadowEffect/>
+            </TextBlock.Effect>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseEnter" SourceName="okay_button">
+                    <ei:ChangePropertyAction PropertyName="Effect">
+                        <ei:ChangePropertyAction.Value>
+                            <ee:PixelateEffect/>
+                        </ei:ChangePropertyAction.Value>
+                    </ei:ChangePropertyAction>
+                </i:EventTrigger>
+                <i:EventTrigger EventName="MouseLeave" SourceName="okay_button">
+                    <ei:ChangePropertyAction PropertyName="Effect"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </TextBlock>
+        <Image x:Name="rick_image" Source="Resources/Rick1.png" Margin="206.667,100.4,-29.653,2" >
+            <Image.Effect>
+                <DropShadowEffect Direction="150"/>
+            </Image.Effect>
+        </Image>
+    </Grid>
+</Window>

@@ -116,3 +116,5 @@ X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\De
 X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\Game.baml
 X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\SetPlayerName.g.cs
 X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\SetPlayerName.baml
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\CongratulationWindow.g.cs
+X:\Career\ISD\Bidding Tic Tac Toe\Bidding-Tic-Tac-Toe\Bidding Tic Tac Toe\obj\Debug\CongratulationWindow.baml

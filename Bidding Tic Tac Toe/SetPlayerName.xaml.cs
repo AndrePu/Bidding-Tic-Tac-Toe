@@ -38,7 +38,7 @@ namespace Bidding_Tic_Tac_Toe
 
         private void TextBox_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.Key != Key.Enter)
+            //if (e.Key != Key.Enter)
                 SetName(textBox.Text);
         }
 
@@ -62,3 +62,8 @@ namespace Bidding_Tic_Tac_Toe
         }
     }
 }
+
+
+
+
+

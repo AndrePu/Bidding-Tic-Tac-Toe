@@ -12,4 +12,16 @@ This is far different from original game process.
 
 StartUp file: Bidding Tic Tac Toe.exe
 
-P.S. WPF Application isn't ready yet!!!
+
+## WPF version is not completely ready
+
+For now you can:
+- Play with your friend on the same PC (two players game)
+
+In Future I promise the game will have:
+- One player game (Game with bot);
+- Easy level bot;
+- Medium level bot;
+- Hard level bot.
+
+
